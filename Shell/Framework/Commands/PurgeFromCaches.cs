@@ -19,6 +19,7 @@
       var item = items.FirstOrDefault();
       if (item != null)
       {
+        Log.Audit(string.Format("Purging {0} item from cache", item.ID), this);
         Pipeline.Start("removeItemFromCache", new RemoveItemFromCachePipelineArgs(item));
       }
     }
