@@ -2,10 +2,6 @@ App_Browsers/
 bin/
 layouts/
 obj/
-sitecore/blocked.aspx
-sitecore/default.aspx
-sitecore/no.css
-sitecore/
 temp/
 xsl/
 sitecore_files/
@@ -25,3 +21,13 @@ web.config.result.xml.normalized.xml
 webedit.css
 App_Config/
 packages/
+sitecore/blocked.aspx
+sitecore/no.css
+sitecore/admin/
+sitecore/Copyrights/
+sitecore/debug/
+sitecore/images/
+sitecore/login/
+sitecore/portal/
+sitecore/service/
+sitecore/shell/
