@@ -120,6 +120,16 @@
     }
 
     [UsedImplicitly]
+    public static void Start([NotNull] Item source, [NotNull] Item copy)
+    {
+      Assert.ArgumentNotNull(source, "source");
+      Assert.ArgumentNotNull(copy, "copy");
+
+      var job = new ReferenceReplacementJob(source, copy);
+      job.Start();
+    }
+
+    [UsedImplicitly]
     public static void StartAsync([NotNull] Database database, [NotNull] string sourceId, [NotNull] string copyId)
     {
       Assert.ArgumentNotNull(database, "database");
@@ -138,6 +148,16 @@
       Assert.ArgumentNotNull(copyId, "copyId");
 
       var job = new ReferenceReplacementJob(database, sourceId, copyId);
+      job.StartAsync();
+    }
+
+    [UsedImplicitly]
+    public static void StartAsync([NotNull] Item source, [NotNull] Item copy)
+    {
+      Assert.ArgumentNotNull(source, "source");
+      Assert.ArgumentNotNull(copy, "copy");
+
+      var job = new ReferenceReplacementJob(source, copy);
       job.StartAsync();
     }
 
