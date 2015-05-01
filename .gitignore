@@ -33,3 +33,6 @@ sitecore/service/
 sitecore/shell/
 App_Data/MediaCache/
 ReSharper.DotSettings
+Sitecore.Support.Essentials.sln.DotSettings
+Sitecore.Support.Essentials.sln.DotSettings.user
+*.bak
