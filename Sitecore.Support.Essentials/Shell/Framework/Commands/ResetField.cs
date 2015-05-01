@@ -62,10 +62,7 @@ namespace Sitecore.Support.Shell.Framework.Commands
       var item = contentDatabase.GetItem(itemId);
       Assert.IsNotNull(item, "item");
 
-      var fields = item.Fields;
-      Assert.IsNotNull(fields, "fields");
-
-      var field = fields[fieldId];
+      var field = item.Fields[fieldId];
       if (field == null || field.InheritsValueFromOtherItem)
       {
         // nothing to reset

@@ -2,9 +2,9 @@
 version: 1
 id: {F3B89121-AB20-48C3-AA76-FE38680C0E31}
 database: core
-path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/Essentials/Purge from caches
+path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/Essentials/Remove item from caches
 parent: {EB0B70D4-9C4C-477F-8C65-8373D1A4BE34}
-name: Purge from caches
+name: Remove item from caches
 master: {00000000-0000-0000-0000-000000000000}
 template: {9F62EBD5-2280-4A35-BE51-A210D831D687}
 templatekey: Small Button
@@ -20,9 +20,9 @@ Applications/16x16/refresh.png
 field: {4C2DEDB4-40FB-4166-8221-C4DD3E914478}
 name: Click
 key: click
-content-length: 26
+content-length: 31
 
-essentials:purgefromcaches
+essentials:removeitemfromcaches
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -169,15 +169,15 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 181eaa50-197c-475a-ac94-7ac267cdee56
+revision: f7f9d880-d544-4373-8fad-0c38b570b417
 
 ----field----
 field: {C184F18B-B452-44D6-8376-FACD6CEF8A42}
 name: Header
 key: header
-content-length: 17
+content-length: 23
 
-Purge from caches
+Remove item from caches
 ----field----
 field: {A47CD065-C361-4332-B22B-7E2148DE06F4}
 name: Tooltip
@@ -219,14 +219,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-181eaa50-197c-475a-ac94-7ac267cdee56
+f7f9d880-d544-4373-8fad-0c38b570b417
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20150429T195211:635659339314003939
+20150501T232240:635661193606099805
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

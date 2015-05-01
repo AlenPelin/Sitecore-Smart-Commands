@@ -7,7 +7,7 @@
   using Sitecore.Support.Pipelines.RemoveItemFromCaches;
 
   [UsedImplicitly]
-  public class PurgeFromCaches : Command
+  public class RemoveItemFromCaches : Command
   {
     public override void Execute([NotNull] CommandContext context)
     {
@@ -19,9 +19,10 @@
       var item = items.FirstOrDefault();
       if (item != null)
       {
-        Log.Audit(string.Format("Purging {0} item from cache", item.ID), this);
-        Pipeline.Start("removeItemFromCache", new RemoveItemFromCachePipelineArgs(item));
+        Log.Audit(string.Format("Remove from caches: {0}", AuditFormatter.FormatItem(item)), this);
+        Pipeline.Start("removeItemFromCaches", new RemoveItemFromCachePipelineArgs(item));
       }
     }
   }
 }
+
