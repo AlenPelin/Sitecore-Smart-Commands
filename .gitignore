@@ -19,7 +19,6 @@ Web.config.Oracle
 Web.config.Oracle.Mvc
 web.config.result.xml.normalized.xml
 webedit.css
-App_Config/
 packages/
 sitecore/blocked.aspx
 sitecore/no.css
