@@ -69,7 +69,6 @@
     <Compile Include="Events\ItemAdded\UpdateLinks.cs" />
     <Compile Include="Jobs\ReferenceReplacementJob.cs" />
     <Compile Include="Pipelines\CloneItems\UpdateLinks.cs" />
-    <Compile Include="Pipelines\DuplicateItem\AbstractProcessor.cs" />
     <Compile Include="Pipelines\DuplicateItem\Execute.cs" />
     <Compile Include="Pipelines\RemoveItemFromCaches\RemoveItemFromAccessResultCache.cs" />
     <Compile Include="Pipelines\RemoveItemFromCaches\RemoveItemFromDataCache.cs" />

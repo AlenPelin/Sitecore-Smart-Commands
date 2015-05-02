@@ -7,14 +7,11 @@ namespace Sitecore.Support.Pipelines.DuplicateItem
   using Sitecore.Globalization;
   using Sitecore.Web.UI.Sheer;
 
-  [UsedImplicitly]
-  public sealed class Execute : AbstractProcessor
+  public sealed class Execute
   {
-    protected override void DoProcess(ClientPipelineArgs args)
+    [UsedImplicitly]
+    public void Process([NotNull] ClientPipelineArgs args)
     {
-      Assert.ArgumentNotNull(args, "args");
-
-      Language language;
       Assert.ArgumentNotNull(args, "args");
 
       var parameters = args.Parameters;
@@ -37,6 +34,7 @@ namespace Sitecore.Support.Pipelines.DuplicateItem
       var sourceId = parameters["id"];
 
       var languageName = parameters["language"];
+      Language language;
       if (!Language.TryParse(languageName, out language))
       {
         language = Context.Language;

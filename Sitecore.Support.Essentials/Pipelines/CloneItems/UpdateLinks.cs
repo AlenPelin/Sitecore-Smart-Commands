@@ -1,12 +1,11 @@
 ﻿namespace Sitecore.Support.Pipelines.CloneItems
 {
   using System;
-  using Sitecore.Configuration;
   using Sitecore.Diagnostics;
   using Sitecore.Shell.Framework.Pipelines;
   using Sitecore.Support.Jobs;
 
-  public sealed class UpdateLinks 
+  public sealed class UpdateLinks
   {
     private readonly bool isAsync;
 
@@ -41,15 +40,14 @@
 
       foreach (var copy in copies)
       {
-       
-      if (this.isAsync)
-      {
-        ReferenceReplacementJob.StartAsync(copy.Source, copy);
-      }
-      else
-      {
-        ReferenceReplacementJob.Start(copy.Source, copy);
-      }
+        if (this.isAsync)
+        {
+          ReferenceReplacementJob.StartAsync(copy.Source, copy);
+        }
+        else
+        {
+          ReferenceReplacementJob.Start(copy.Source, copy);
+        }
       }
 
       // if mode is smart then this should be the last processor

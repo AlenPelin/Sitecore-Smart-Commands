@@ -6,7 +6,7 @@
   using Sitecore.Support.Jobs;
   using Sitecore.Web.UI.Sheer;
 
-  public sealed class UpdateLinks : AbstractProcessor
+  public sealed class UpdateLinks
   {
     private readonly bool isAsync;
 
@@ -23,12 +23,17 @@
     }
 
     [UsedImplicitly]
-    protected override void DoProcess(ClientPipelineArgs args)
+    public void Process([NotNull] ClientPipelineArgs args)
     {
       Assert.ArgumentNotNull(args, "args");
 
       var parameters = args.Parameters;
       Assert.IsNotNull(parameters, "parameters");
+
+      if (!string.Equals(parameters["mode"], "smart", StringComparison.OrdinalIgnoreCase))
+      {
+        return;
+      }
 
       var databaseName = parameters["database"];
       var database = Factory.GetDatabase(databaseName);
