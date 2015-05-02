@@ -190,7 +190,7 @@
       Assert.ArgumentNotNull(copy, "copy");
 
       var sourcePath = source.Paths.FullPath;
-      var linksNeedProcessing = copy.Links.GetAllLinks(true).Where(x => this.NeedsProcessing(x));
+      var linksNeedProcessing = copy.Links.GetAllLinks(true, true).Where(x => this.NeedsProcessing(x));
       var languageGroups = linksNeedProcessing.GroupBy(x => x.SourceItemLanguage);
       foreach (var languageGroup in languageGroups)
       {
@@ -246,6 +246,12 @@
     private bool NeedsProcessing([NotNull] ItemLink link)
     {
       Assert.ArgumentNotNull(link, "link");
+
+      // prevent circular cloning chain
+      if (link.SourceFieldID == FieldIDs.Source)
+      {
+        return false;
+      }
 
       var linkTarget = link.GetTargetItem();
       if (linkTarget == null)
