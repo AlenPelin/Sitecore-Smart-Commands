@@ -56,11 +56,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Sitecore.Support.Essentials.config" />
     <Content Include="Data\Smart Duplicate Test Items.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Serialization\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -81,6 +77,13 @@
     <Compile Include="Shell\Framework\Commands\ResetField.cs" />
     <Compile Include="Shell\Framework\Commands\SmartClone.cs" />
     <Compile Include="Shell\Framework\Commands\SmartDuplicate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartDuplicate.config" />
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartClone.config" />
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartBranch.config" />
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.RemoveItemFromCaches.config" />
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.ClearFieldButton.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
