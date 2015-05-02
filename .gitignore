@@ -35,3 +35,5 @@ ReSharper.DotSettings
 Sitecore.Support.Essentials.sln.DotSettings
 Sitecore.Support.Essentials.sln.DotSettings.user
 *.bak
+*.pubxml
+*.user
