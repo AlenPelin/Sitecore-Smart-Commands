@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Events\ItemAdded\UpdateLinks.cs" />
     <Compile Include="Jobs\ReferenceReplacementJob.cs" />
+    <Compile Include="Pipelines\CopyItems\UpdateLinks.cs" />
     <Compile Include="Pipelines\CloneItems\UpdateLinks.cs" />
     <Compile Include="Pipelines\DuplicateItem\Execute.cs" />
     <Compile Include="Pipelines\RemoveItemFromCaches\RemoveItemFromAccessResultCache.cs" />
@@ -75,12 +76,14 @@
     <Compile Include="Shell\Framework\Commands\RemoveItemFromCaches.cs" />
     <Compile Include="Pipelines\RemoveItemFromCaches\RemoveItemFromCachePipelineArgs.cs" />
     <Compile Include="Shell\Framework\Commands\ResetField.cs" />
+    <Compile Include="Shell\Framework\Commands\SmartCopyTo.cs" />
     <Compile Include="Shell\Framework\Commands\SmartClone.cs" />
     <Compile Include="Shell\Framework\Commands\SmartDuplicate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartDuplicate.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartClone.config" />
+    <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartCopyTo.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartBranch.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.RemoveItemFromCaches.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.ClearFieldButton.config" />
