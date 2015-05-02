@@ -1,11 +1,9 @@
 namespace Sitecore.Support.Shell.Framework.Commands
 {
   using System.Collections.Specialized;
-  using System.Linq;
   using Sitecore.Configuration;
   using Sitecore.Data.Items;
   using Sitecore.Diagnostics;
-  using Sitecore.Shell.Framework;
   using Sitecore.Shell.Framework.Commands;
   using Sitecore.Shell.Framework.Pipelines;
   using Sitecore.Text;
