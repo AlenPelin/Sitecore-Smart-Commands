@@ -87,7 +87,6 @@
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.SmartBranch.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.RemoveItemFromCaches.config" />
     <Content Include="App_Config\Include\Sitecore.Support.Essentials.ClearFieldButton.config" />
-    <None Include="Properties\PublishProfiles\Publish.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
