@@ -37,3 +37,4 @@ Sitecore.Support.Essentials.sln.DotSettings.user
 *.bak
 *.pubxml
 *.user
+*.DotSettings
