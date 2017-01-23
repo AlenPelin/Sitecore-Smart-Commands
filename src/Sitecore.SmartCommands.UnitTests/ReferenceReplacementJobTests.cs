@@ -10,11 +10,9 @@
   {
     [TestMethod]
     public void ReferenceReplacementJobTest()
-    {
+    {                                              
       using (var db = new Db("master"))
       {
-        db.Configuration.Settings["LicenseFile"] = "C:\\Sitecore\\Keys\\license.xml";
-
         var sourceRoot = Sitecore.Data.ID.NewID;
         var sourceChild1 = Sitecore.Data.ID.NewID;
         var sourceGrandChild1 = Sitecore.Data.ID.NewID;

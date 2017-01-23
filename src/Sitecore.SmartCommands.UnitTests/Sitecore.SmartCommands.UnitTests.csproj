@@ -42,12 +42,23 @@
     <Reference Include="FluentAssertions.Core">
       <HintPath>..\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Lucene.Net.7.0.2\lib\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.FakeDb">
       <HintPath>..\packages\Sitecore.FakeDb.0.25.1\lib\net45\Sitecore.FakeDb.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.7.0.0.140408\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Kernel.7.0.2\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.Logging.7.0.2\lib\Sitecore.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.sitecore.nexus.7.0.2\lib\sitecore.nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -71,8 +82,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sitecore.SmartCommands\Sitecore.SmartCommands.csproj">

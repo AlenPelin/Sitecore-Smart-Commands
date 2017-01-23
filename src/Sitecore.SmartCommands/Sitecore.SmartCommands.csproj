@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,19 +48,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\Sitecore.7.0.0.140408\lib\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.Kernel.7.0.2\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\Smart Duplicate Test Items.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\ItemAdded\UpdateLinks.cs" />
@@ -78,6 +73,9 @@
     <Content Include="App_Config\Include\Sitecore.SmartCommands.Clone.config" />
     <Content Include="App_Config\Include\Sitecore.SmartCommands.CopyTo.config" />
     <Content Include="App_Config\Include\Sitecore.SmartCommands.CreateFromBranch.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
