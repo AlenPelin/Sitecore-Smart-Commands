@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\ItemAdded\UpdateLinks.cs" />
-    <Compile Include="Jobs\ReferenceReplacementJob.cs" />
     <Compile Include="Pipelines\CopyItems\UpdateLinks.cs" />
     <Compile Include="Pipelines\CloneItems\UpdateLinks.cs" />
     <Compile Include="Pipelines\DuplicateItem\Execute.cs" />

@@ -2,7 +2,7 @@
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Sitecore.SmartCommands.Jobs;
+  using Sitecore.Jobs;
   using Sitecore.FakeDb;
 
   [TestClass]

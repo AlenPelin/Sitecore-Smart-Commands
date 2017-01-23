@@ -3,7 +3,7 @@
   using System;
   using Sitecore.Configuration;
   using Sitecore.Diagnostics;
-  using Sitecore.SmartCommands.Jobs;
+  using Sitecore.Jobs;
   using Sitecore.Web.UI.Sheer;
 
   public sealed class UpdateLinks

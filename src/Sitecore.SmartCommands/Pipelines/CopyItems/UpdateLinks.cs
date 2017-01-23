@@ -7,7 +7,7 @@
   using Sitecore.Data.Items;
   using Sitecore.Diagnostics;
   using Sitecore.Shell.Framework.Pipelines;
-  using Sitecore.SmartCommands.Jobs;
+  using Sitecore.Jobs;
   using Sitecore.Text;
 
   public sealed class UpdateLinks
