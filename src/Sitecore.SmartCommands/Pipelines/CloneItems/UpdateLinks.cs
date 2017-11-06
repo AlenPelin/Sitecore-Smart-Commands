@@ -24,34 +24,27 @@
     [UsedImplicitly]
     public void Process([NotNull] CopyItemsArgs args)
     {
-      Assert.ArgumentNotNull(args, "args");
+            Assert.ArgumentNotNull(args, "args");
 
-      var parameters = args.Parameters;
-      Assert.IsNotNull(parameters, "parameters");
+            var parameters = args.Parameters;
+            Assert.IsNotNull(parameters, "parameters");
 
-      if (!string.Equals(parameters["mode"], "smart", StringComparison.OrdinalIgnoreCase))
-      {
-        return;
-      }
+            if (!string.Equals(parameters["mode"], "smart", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
 
 
-      var copies = args.Copies;
-      Assert.IsNotNull(copies, "copies");
+            var copies = args.Copies;
+            Assert.IsNotNull(copies, "copies");
 
-      foreach (var copy in copies)
-      {
-        if (this.isAsync)
-        {
-          ReferenceReplacementJob.StartAsync(copy.Source, copy);
+            foreach (var copy in copies)
+            {
+                Helper.ReplaceItemReferences(copy.Source, copy, true, isAsync);
+            }
+
+            // if mode is smart then this should be the last processor
+            args.AbortPipeline();
         }
-        else
-        {
-          ReferenceReplacementJob.Start(copy.Source, copy);
-        }
-      }
-
-      // if mode is smart then this should be the last processor
-      args.AbortPipeline();
-    }
   }
 }
